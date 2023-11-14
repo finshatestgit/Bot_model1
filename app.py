@@ -125,7 +125,10 @@ def dialogflow_webhook():
 
     result = fetch_data_for_company(company_name, column, description, unit)
     return jsonify({"fulfillmentText": result})
-
+    
+@app.route('/')
+def home():
+    return "Hello, this is my app!"
 
 if __name__ == "__main__":
     app.run(debug=True)
